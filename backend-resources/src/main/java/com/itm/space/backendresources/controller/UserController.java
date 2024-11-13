@@ -30,6 +30,7 @@ public class UserController {
     @SecurityRequirement(name = "oauth2_auth_code")
     public void create(@RequestBody @Valid UserRequest userRequest) {
         userService.createUser(userRequest);
+
     }
 
     @GetMapping("/{id}")
